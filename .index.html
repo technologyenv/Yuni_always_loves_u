@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة جديدة 🤍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="book-container">
+        <div id="book" class="book">
+            
+            <!-- الغلاف الأمامي (Cover) -->
+            <div class="page cover-front" onclick="movePage(this, 1)">
+                <div class="cover-content">
+                    <h1>صفحة جديدة 🤍</h1>
+                    <p>إلى أحن نونو في الدنيا</p>
+                    <span class="click-hint">اضغط لفتح الكتاب ✨</span>
+                </div>
+            </div>
+
+            <!-- الصفحة الأولى (امتنان وتقدير) -->
+            <div class="page page-left" onclick="movePage(this, 2)">
+                <div class="page-content">
+                    <h2>ممتنة لوجودك 🌸</h2>
+                    <p>عايزة أقولك إني من كل قلبي ممتنة لليوم اللي عرفتك فيه ولجودك في حياتي. أنت دخلت قلبي بجمال روحك ونقاء قلبك ولطفك اللي ملوش مثيل.</p>
+                    <p>كل ثانية حلوة قضيناها سوا وكل ضحكة من قلبنا هي المكسب الحقيقي ليا في الدنيا دي.</p>
+                    <span class="page-number">1</span>
+                </div>
+            </div>
+
+            <!-- الصفحة الثانية (حقيقتك في عيني) -->
+            <div class="page page-right" onclick="movePage(this, 3)">
+                <div class="page-content">
+                    <h2>حقيقتك في عيني ✨</h2>
+                    <p>خليك دايماً عارف ومقتنع إنك في عيني أحسن وأجمل وأنقى واحد في الدنيا دي كلها. الماضي بالنسبة ليا اتمسح بـ أستيكة ومبقاش يفرق معايا في أي حاجة، ونضجت تماماً من ناحيته.</p>
+                    <p>أنت مهما عملت في الماضي أو في المستقبل، أنا هفضل بحبك وهفضل دايماً شايفة الشخص اللطيف النقي اللي خطف قلبي من أول يوم.</p>
+                    <span class="page-number">2</span>
+                </div>
+            </div>
+
+            <!-- الصفحة الثالثة (الوعود والمستقبل) -->
+            <div class="page page-left" onclick="movePage(this, 4)">
+                <div class="page-content">
+                    <h2>وعودنا الجديدة 🤝🤍</h2>
+                    <p>الصفحة دي اتفتحت عشان نكتب فيها وعودنا سوا.. وعد بالأمان، ووعد بالنضج، ووعد إننا نكون سند وضهر لبعض طول الوقت وفي كل خطوة جاية.</p>
+                    <p>هنعدي أي حاجة سوا طول ما إحنا ماسكين إيد بعض بجد ونيتنا صافية وحبنا هو اللي بيمشينا.</p>
+                    <span class="page-number">3</span>
+                </div>
+            </div>
+
+            <!-- الغلاف الخلفي (Back Cover) -->
+            <div class="page cover-back">
+                <div class="cover-content">
+                    <h3>أنت حلاوة الحياة والحب كله..</h3>
+                    <p>يمنى 🤍 نونو</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function movePage(pageObj, num) {
+            if (pageObj.classList.contains('flipped')) {
+                pageObj.classList.remove('flipped');
+                pageObj.style.zIndex = 20 - num;
+            } else {
+                pageObj.classList.add('flipped');
+                pageObj.style.zIndex = 20 + num;
+            }
+        }
+    </script>
+</body>
+</html>
