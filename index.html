@@ -10,63 +10,85 @@
 <body>
 
     <div class="book-container">
-        <div id="book" class="book">
+        <div class="book">
             
-            <div class="page cover-front" onclick="movePage(this, 1)">
-                <div class="cover-content">
-                    <h1>The Promise 🤍</h1>
-                    <p>إلى حبيبي عبدالرحمن</p>
-                    <span class="click-hint">اضغط لفتح الكتاب ✨</span>
+            <!-- ورقة 1: الغلاف الأمامي / الظهر هو صفحة 1 -->
+            <div class="page" id="p1" style="z-index: 4;">
+                <div class="front cover-front">
+                    <div class="cover-content">
+                        <h1>The Promise 🤍</h1>
+                        <p class="subtitle">إلى حبيبي عبدالرحمن</p>
+                        <span class="click-hint">اضغط لفتح الكتاب ✨</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="page-content">
+                        <h2>ممتنة لوجودك 🌸</h2>
+                        <p>عايزة أقولك إني من كل قلبي ممتنة لكل لحظة أنا معاك فيها. أنت دخلت قلبي بجمال روحك وطيبتك اللي مفيش زيها في الدنيا دي كلها. ✨</p>
+                        <p>وجودك في حياتي هو الحاجة الحلوة اللي بتطمن قلبي دايماً، وأنا حقيقي سعيدة وممتنة إن ربنا جمعنا سوا.</p>
+                        <span class="page-number">1</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="page page-left" onclick="movePage(this, 2)">
-                <div class="page-content">
-                    <h2>ممتنة لوجودك 🌸</h2>
-                    <p>عايزة أقولك إني من كل قلبي ممتنة لكل لحظة عشتها معاك. أنت دخلت قلبي بجمال روحك وطيبتك اللي مفيش زيها.</p>
-                    <p>وجودك في حياتي هو اللي بيطمن قلبي، وأنا ممتنة جداً إننا سوا.</p>
-                    <span class="page-number">1</span>
+            <!-- ورقة 2: صفحة 2 / الظهر هو صفحة 3 -->
+            <div class="page" id="p2" style="z-index: 3;">
+                <div class="front">
+                    <div class="page-content">
+                        <h2>حقيقتك في عيني ✨</h2>
+                        <p>خليك دايماً واثق ومقتنع إنك في عيني أحسن وأجمل وأنقى واحد في الدنيا دي كلها. الماضي اتمسح تماماً ومبقاش يفرق معايا في أي حاجة، ونضجت من ناحيته تماماً.</p>
+                        <p>أنا حبيت عبدالرحمن اللي قدامي بكل تفاصيله، وهفضل دايماً شايفة فيك الشخص اللطيف النقي اللي خطف قلبي من أول يوم.</p>
+                        <span class="page-number">2</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="page-content">
+                        <h2>وعد صادق 🤝🤍</h2>
+                        <p>بوعدك نفتح مع بعض صفحة جديدة ونظيفة، نكون فيها لبعض السند والضهر والآمان. هنعدي أي خناق وأي زعل بكل نضج وحب، عشان مركبتنا تمشي في أمان دايماً.</p>
+                        <p>أحبك يا حبيبي ومستحيل أفرط في وجودك معايا.</p>
+                        <span class="page-number">3</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="page page-right" onclick="movePage(this, 3)">
-                <div class="page-content">
-                    <h2>حقيقتك في عيني ✨</h2>
-                    <p>خليك دايماً واثق ومقتنع إنك في عيني أجمل وأنقى واحد في الدنيا كلها. الماضي اتمسح تماماً، ومبقاش يفرق معايا أي تفصيلة قديمة.</p>
-                    <p>أنا حبيت عبدالرحمن اللي قدامي بكل تفاصيله، وهفضل دايماً شايفة فيك الشخص اللطيف اللي خطف قلبي.</p>
-                    <span class="page-number">2</span>
+            <!-- ورقة 3: الغلاف الخلفي الثابت -->
+            <div class="page" id="p3" style="z-index: 2;">
+                <div class="front cover-back">
+                    <div class="cover-content">
+                        <h3>أنت حلاوة الحياة والحب كله..</h3>
+                        <p>يمنى ❤️ عبدالرحمن</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="page page-left" onclick="movePage(this, 4)">
-                <div class="page-content">
-                    <h2>وعد 🤝🤍</h2>
-                    <p>أنا بوعدك نفتح صفحة جديدة ونكون لبعض السند والضهر. هنعدي كل حاجة سوا، وبكل نضج وحب، عشان نكتب مع بعض أحلى قصة.</p>
-                    <p>أحبك يا حبيبي.</p>
-                    <span class="page-number">3</span>
-                </div>
-            </div>
-
-            <div class="page cover-back">
-                <div class="cover-content">
-                    <h3>أنت حلاوة الحياة..</h3>
-                    <p>يمنى ❤️ عبدالرحمن</p>
-                </div>
+                <div class="back"></div>
             </div>
 
         </div>
     </div>
 
     <script>
-        function movePage(pageObj, num) {
-            if (pageObj.classList.contains('flipped')) {
-                pageObj.classList.remove('flipped');
-                pageObj.style.zIndex = 20 - num;
-            } else {
-                pageObj.classList.add('flipped');
-                pageObj.style.zIndex = 20 + num;
-            }
-        }
+        // كود الجافاسكريبت المطور لتقليب الصفحات بالتتابع الصحيح
+        const pages = document.querySelectorAll('.page');
+        
+        pages.forEach((page, index) => {
+            page.addEventListener('click', () => {
+                if (page.id === 'p3') return; // الغلاف الخلفي لا يتقلب
+                
+                if (!page.classList.contains('flipped')) {
+                    page.classList.add('flipped');
+                    // تظبيط الطبقات بعد القلب
+                    setTimeout(() => {
+                        page.style.zIndex = index + 1;
+                    }, 300);
+                } else {
+                    page.classList.remove('flipped');
+                    // إرجاع الطبقات الأصلية عند الغلق
+                    setTimeout(() => {
+                        if (page.id === 'p1') page.style.zIndex = 4;
+                        if (page.id === 'p2') page.style.zIndex = 3;
+                    }, 300);
+                }
+            });
+        });
     </script>
 </body>
 </html>
